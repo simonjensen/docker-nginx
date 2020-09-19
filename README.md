@@ -2,4 +2,4 @@
 
 A base image for nginx.
 
-Base on `nginx:1.17.6-alpine`.
+Base on `nginx:1.19-alpine`.
