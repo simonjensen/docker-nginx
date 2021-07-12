@@ -1,4 +1,4 @@
-FROM nginx:1.19-alpine
+FROM nginx:1.21.1-alpine
 
 RUN apk add tzdata && \
     ln -s /usr/share/zoneinfo/Europe/Copenhagen /etc/localtime
