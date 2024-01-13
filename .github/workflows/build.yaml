@@ -1,10 +1,9 @@
 name: Build
 
-# Worflow will run on pushes to all branhes + pull requests to all branches
 on:
   push:
-    branches:
-      - '**'
+    branches-ignore:
+      - master
 
 jobs:
   build:
@@ -12,9 +11,16 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v3
+      - name: Checkout repository
+        uses: actions/checkout@v4
 
-      - uses: docker/build-push-action@v4
+      - name: Generate short SHA
+        uses: benjlevesque/short-sha@v2.2
+        id: short-sha
+
+      - name: Build Docker image
+        uses: docker/build-push-action@v5
         with:
+          context: .
           push: false
-          tags: simonjensen/docker-nginx:testing
+          tags: ${{ github.repository }}:${{ steps.short-sha.outputs.sha }}
