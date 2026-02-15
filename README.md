@@ -1,7 +1,7 @@
 # docker-nginx
 
-[![Build and Publish](https://github.com/simonjensen/docker-nginx/actions/workflows/publish.yaml/badge.svg)](https://github.com/simonjensen/docker-nginx/actions/workflows/publish.yaml)
+[![Pipeline](https://github.com/simonjensen/docker-nginx/actions/workflows/pipeline.yaml/badge.svg)](https://github.com/simonjensen/docker-nginx/actions/workflows/pipeline.yaml)
 
 > A base image for nginx.
 
-Base on `nginx:1.29.1-alpine`.
+Base on `nginx:1.29.5-alpine`.
