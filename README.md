@@ -4,4 +4,4 @@
 
 > A base image for nginx.
 
-Base on `nginx:1.29.5-alpine`.
+Base on <https://hub.docker.com/_/nginx>.
