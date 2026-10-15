@@ -1,4 +1,4 @@
-FROM nginx:1.31.6-alpine@sha256:adad2ae9204d0fd7a34f40299bc838c3782be1293b10005eac4315ff5a1abf4e
+FROM nginx:1.31.7-alpine@sha256:42c36dfd0b3503b7966771550a91521262b4750665929821abf5069715610e20
 
 RUN apk add tzdata && \
     ln -s /usr/share/zoneinfo/Europe/Copenhagen /etc/localtime
